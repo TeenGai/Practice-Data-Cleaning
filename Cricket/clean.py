@@ -35,7 +35,7 @@ def clean(file_name):
     df = drop_dup
 
 
-    # Drop Null
+    # Replace Null with average
     df['Batting_Strike_Rate'] = df['Batting_Strike_Rate'].fillna(df['Batting_Strike_Rate'].mean().round(2))
 
 
