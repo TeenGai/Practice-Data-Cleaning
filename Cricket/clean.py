@@ -60,7 +60,7 @@ def clean(file_name):
     df['Highest_Inns_Score'] = df['Highest_Inns_Score'].str.extract(r'(\d+)')
     df['Highest_Inns_Score'] = df['Highest_Inns_Score'].astype(int)
 
-    df.to_csv("cleaned_cricket.csv", header=True, index=False)
+    df.to_parquet("cleaned_cricket.parquet", index=False)
 
 
 clean("raw_cricket.csv")

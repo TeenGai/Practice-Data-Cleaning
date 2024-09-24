@@ -83,7 +83,7 @@ def clean(file_name):
     )
 
 
-    df.to_csv("cleaned_audible.csv", header=True, index=False)
+    df.to_parquet("cleaned_audible.parquet", index=False)
 
 
 clean("raw_audible.csv")
